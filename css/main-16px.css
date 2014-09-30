@@ -1,0 +1,299 @@
+/*	Less Framework 4 with 16/24 type presets
+	http://lessframework.com
+	by Joni Korpi
+	License: http://opensource.org/licenses/mit-license.php	*/
+
+
+
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+a img {border: 0;}
+
+
+
+/*	Typography presets
+	------------------	*/
+
+.gigantic {
+	font-size: 110px;
+	line-height: 120px;
+	letter-spacing: -2px;
+}
+
+.huge, h1 {
+	font-size: 30px;
+	line-height: 42px;
+	letter-spacing: -1px;
+}
+
+.large, h2 {
+	font-size: 14px;
+	line-height: 20px;
+	font-family:'Clarendon W01 Light 927490';
+	font-weight:normal;
+}
+
+.bigger, h3 {
+	font-size: 26px;
+	line-height: 36px;
+}
+
+.big, h4 {
+	font-size: 14px;
+	line-height: 20px;
+	color:#999999;
+	font-family:'Clarendon W01 Light 927490';
+}
+
+body {
+	font: 12px Helvetica, sans-serif;
+	
+}
+
+.small, small {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+p {
+	font-size: 12px;
+	line-height: 20px;
+	margin-bottom:5px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-family:'Helvetica W01 Light';
+	color:#999999;
+}
+
+a {
+	font-size: 12px;
+	color:#a3988a;
+	font-family:'Clarendon W01 Light 927490';
+	
+}
+
+/* Selection colours (easy to forget) */
+
+::selection 	 	{background: rgb(255,255,158);}
+::-moz-selection 	{background: rgb(255,255,158);}
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+body {-webkit-tap-highlight-color: rgb(255,255,158);}
+.clear { clear:both; }
+
+/*		Default Layout: 992px. 
+		Gutters: 24px.
+		Outer margins: 48px.
+		Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
+body {
+	font-size:12px;
+
+	background: #ffffff;
+	color: rgb(60,60,60);
+	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+	background:url(../images/reverb_bg.gif) no-repeat;
+}
+header {   height:150px; position:fixed;  top:0px; width:100%; z-index:80;  background:url(../images/header-background.png) repeat-x; }
+header > .wrap { position:relative !important; height:150px; margin:0 auto;  width:896px; }
+
+header .share { position:absolute; top:30px; left:375px; height:18px; padding:5px 10px; border:1px dashed #d0d0d0; background:#f6f5f4;  }
+header .share a { display:block; float:left; }
+header .share a.pin { margin-left:19px;}
+header .logo { position:absolute; top:30px; left:24px; }
+
+
+header nav { position:absolute; top:0px; right:0px;   }
+header nav .strap { top:560px; right:0px; width:0px; display:none; border-top:1px dashed #d0d0d0;  position:absolute; }
+header nav ul { list-style:none; }
+
+header nav li { float:left;  width:37px;  border-right:1px dashed #d0d0d0;   }
+header nav li.none { height:74px; width:0px; padding:0px; }
+header nav li.active {      }
+header nav li.active a { background:url(../images/nav-active-end.png) no-repeat bottom;  } 
+header nav a.link {  display:block; text-indent:-999px; overflow:hidden; }
+
+header nav li a {  padding:10px; width:16px;  display:block; padding-bottom:27px; }
+header nav a span { display:block; }
+header nav a.home span { background:url(../images/nav-home.png) no-repeat; width:16px; height:64px;}
+header nav a.projects span {  background:url(../images/nav-projects.png) no-repeat; width:16px; height:94px; }
+header nav a.getintouch span {  background:url(../images/nav-getintouch.png) no-repeat; width:16px; height:122px;  }
+
+
+footer { height:38px; border:1px solid #FFF; border-left:none; border-right:none; position:fixed;  bottom: 0px; background:#bbcac9; width:100%; color:#FFF;  z-index:80;  }
+footer .wrap { width:896px; margin:0 auto; }
+footer  .links { float:left; width:795px; padding:10px; }
+footer  .links a {  } 
+footer  .links ul { list-style:none; } 
+footer  .links ul li { float:left; padding:2px 20px; border:1px dashed #FFF; margin-right:18px; font-size: 10px; } 
+footer  .links ul li a {  font-size: 10px; color:white; text-decoration:none; }
+footer  .links ul li:last-child { margin:0px; }
+
+footer .social { float:right; padding:10px;  }
+footer .social  a { margin:0px 5px;}
+
+
+
+article aside { width:250px; float:left; padding-top:40px; }
+article aside h1 {  margin-bottom:20px; padding-bottom:20px; border-bottom:1px dashed #d2d2d2; text-align:center; text-indent:-999px; overflow:hidden; }
+article aside h2 {  margin-bottom:20px; text-align:center; }
+article aside p { margin-bottom:20px; text-align:justify; }
+article aside ul.related { list-style:none; font-family:'Clarendon W01 Light 927490';  }
+article aside ul.related li { height:14px;  border:1px dashed #d0d0d0; padding:8px; text-align:center; margin-bottom:15px; background:#F6F5F4;  }
+article aside ul.related li:hover { background:white;}
+article aside ul.related li.current { background:white; }
+article aside ul.related li.current a { color:#000; }
+article aside ul.related li a { text-decoration:none; }
+
+
+#bathroom-refurbishment { width:896px; padding-top:150px; }
+#kirkhill-road-attic{ width:896px; padding-top:150px; }
+#outdoor-performance  { width:896px; padding-top:150px; }
+#upper-gray-st-attic { width:896px; padding-top:150px; }
+
+article#bathroom-refurbishment aside h1 {  width:250px; height:73px; background:url(../images/title-bathroom.png) no-repeat; }
+article#kirkhill-road-attic aside h1 {  width:250px; height:70px; background:url(../images/title-kirkhillroad.png) no-repeat; }
+article#outdoor-performance aside h1 {  width:250px; height:70px; background:url(../images/title-outer.png) no-repeat; }
+article#upper-gray-st-attic h1  {  width:250px; height:70px; background:url(../images/title-uppergrayst.png) no-repeat; }
+
+article section { width:530px; margin-left:355px; padding-top:93px; }
+article section .slider { font-family:'Clarendon W01 Light 927490'; }
+article section .slider .navigation { height:30px; margin-bottom:10px; position:relative;  }
+article section .slider .navigation .controls { float:left; width:150px; height:30px; position: absolute;  top: 50px; z-index: 10; left: 20px; } 
+article section .slider .navigation .controls a { display:block; width:50px; float:left; border:1px dashed #d0d0d0; padding:9px; text-align:center; text-decoration:none; background:#F6F5F4; }
+article section .slider .navigation .controls a.next {   margin-left:10px; }
+article section .slider .navigation .controls a.prev {  }
+article section .slider .navigation .controls a:hover { background:white; }
+article section .slider .navigation .stat { float:right; color:#A3988A; position: absolute; top: 532px; z-index: 20; left: 10px; }
+article section .slider .navigation .stat span { display:none; }
+article section .slider .navigation .stat span.activeSlide { display:block; }
+article section .slider .imagepanel {  border:1px dashed #d0d0d0;  height:530px; width:528px; list-style:none; overflow:hidden; }
+article section .slider .imagepanel li { position:relative; }
+article section .slider .imagepanel li h4 { color:#A3988A; font-weight:normal; position:absolute; bottom:20px; height:18px; border-top:1px dashed #d0d0d0;  border-bottom:1px dashed #d0d0d0; width:480px;  padding:5px 15px; padding-left: 35px; display:block; background:#ffffff; font-size:12px; }
+article section .slider .imagepanel li h4 span { color:#999; }
+article section .slider .imagepanel li h4 .zoom{ float:right; display:block;  }
+
+body > .wrap { 	width: 896px;	padding:0px 48px; 	margin:0 auto; padding-bottom: 70px;  }
+
+#home { width:896px; padding-top:150px; }
+#home .graphic { background:url(../images/home-text.png) no-repeat; width:285px; height:164px; margin:0 auto; margin-top:40px; } 
+#home .content { padding-top:35px; margin:0 auto; width:300px; }
+#home .content h4 { text-align:center; font-weight:normal; }
+#home .content p {  text-align:justify; }
+
+#home .content #expandtext { position:relative; height: 300px; }
+#home .content #expandtext .normal {}
+#home .content #expandtext .expanded { position:absolute; left:-175px; width:650px; display:none;  }
+#home .content #expandtext .expanded .left { float:left; width:300px;  }
+#home .content #expandtext .expanded .right {  width:300px; margin-left:350px;  }
+#home .content #expandtext .expanded .less { float:right; }
+ 
+
+#getintouch { width:896px; padding-top:150px; }
+#getintouch .graphic { background:url(../images/getintouch-text.png) no-repeat; width:208px; height:162px; margin:0 auto; margin-top:0px; } 
+#getintouch .content { padding-top:35px; margin:0 auto; width:300px; }
+#getintouch .content h4 { text-align:center; }
+#getintouch .content p {  text-align:center;  font-family:'Clarendon W01 Light 927490'; color:#A3988A; font-size:13px; }
+#getintouch .form { width:304px; margin:0 auto; margin-top:20px; margin-bottom:80px;  border:1px dashed #d0d0d0; background:#eff2f2; padding:20px; height:400px; color:#A3988A; font-family:'Clarendon W01 Light 927490';  }
+#getintouch .form p { margin-bottom:30px; font-size:13px; color:#A3988A;   font-family:'Clarendon W01 Light 927490'; }
+#getintouch .form label { display:block; padding-top:10px; float:left; }
+#getintouch .form .textfield { height:32px; margin-bottom:20px;  }
+#getintouch .form .textfield.button { margin-bottom:5px;}
+#getintouch .form .textfield input { float:right;  border:1px dashed #d0d0d0; background:#FFF; width:228px; height:28px; }
+#getintouch .form .textfield input.button { background:#f6f5f4; cursor:pointer; font-family:'Clarendon W01 Light 927490'; color:#A3988A; font-size:13px;  } 
+#getintouch .form .textfield input.button:hover { background:white; }
+#getintouch .form .textarea { height:90px;  margin-bottom:20px;  }
+#getintouch .form .textarea textarea { height:90px; float:right; width:224px;  border:1px dashed #d0d0d0; background:#FFF;   }
+#getintouch .form .error {  padding:0px; margin-bottom:15px; float:right; }
+
+/*		Tablet Layout: 768px.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+/*
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	
+	body {
+		width: 712px;
+		padding: 48px 28px 60px;
+	}
+}
+*/
+
+
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+/*
+@media only screen and (max-width: 767px) {
+	
+	body {
+		width: 252px;
+		padding: 48px 34px 60px;
+	}
+	
+}
+*/
+
+
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+/*
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	body {
+		width: 436px;
+		padding: 36px 22px 48px;
+	}
+
+}
+*/
+
+/*	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+-----------------------------------------------    */
+/*
+@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-device-pixel-ratio: 2) {
+	
+	body {
+	
+	}
+	
+}
+*/
